@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux";
 import {removeUser} from "../Store/Slices/userSlice";
 
 export const HomePage = () => {
-    const {isAuth,email} = useAuth()
+    const {isAuth, email} = useAuth()
 const dispatch = useDispatch()
     return isAuth?(
         <div>

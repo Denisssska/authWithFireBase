@@ -7,8 +7,10 @@ import {useNavigate} from "react-router-dom";
 
 
 export const SignUp = () => {
+
     const dispatch = useDispatch()
     const navigate = useNavigate()
+
     const handleRegister = async (email: string, password: string) => {
         const auth = getAuth()
         try {
