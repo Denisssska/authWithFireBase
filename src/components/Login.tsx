@@ -1,16 +1,16 @@
-import React, {useCallback} from 'react';
-import {useDispatch} from "react-redux";
+import React from 'react';
 import {Form} from "./Form";
 import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
 import {setUser} from "../Store/Slices/userSlice";
 import {useAuth} from "../Hooks/use-Auth";
 import {Navigate, useNavigate} from "react-router-dom";
+import {useAppDispatch} from "../Hooks/Hooks";
 
 export const Login = () => {
 
     const {isAuth} = useAuth()
     const navigate = useNavigate()
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
 
     const handleClick = async (email: string, password: string) => {
 

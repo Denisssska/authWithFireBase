@@ -1,14 +1,14 @@
-import React, {useCallback} from 'react';
-import {useDispatch} from "react-redux";
+import React from 'react';
 import {Form} from "./Form";
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {createUserWithEmailAndPassword, getAuth} from "firebase/auth";
 import {setUser} from "../Store/Slices/userSlice";
 import {useNavigate} from "react-router-dom";
+import {useAppDispatch} from "../Hooks/Hooks";
 
 
 export const SignUp = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const navigate = useNavigate()
 
     const handleRegister = async (email: string, password: string) => {
